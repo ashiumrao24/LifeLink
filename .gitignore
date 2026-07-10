@@ -1,0 +1,24 @@
+# Build directory
+build/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# CLion
+.idea/
+
+# Executables
+LifeLink
+
+# Data generated while testing
+data/donors.txt
+data/requests.txt
