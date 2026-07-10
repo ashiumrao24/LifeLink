@@ -4,7 +4,14 @@ project(LifeLink)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(include)
+include_directories(
+    include
+    /opt/homebrew/opt/mysql-connector-c++/include
+)
+
+link_directories(
+    /opt/homebrew/opt/mysql-connector-c++/lib
+)
 
 add_executable(LifeLink
     src/main.cpp
@@ -19,4 +26,10 @@ add_executable(LifeLink
     src/requestRepository.cpp
     src/inputHelper.cpp
     src/dateUtils.cpp
+    src/databaseManager.cpp
+)
+
+target_link_libraries(
+    LifeLink
+    mysqlcppconnx
 )
